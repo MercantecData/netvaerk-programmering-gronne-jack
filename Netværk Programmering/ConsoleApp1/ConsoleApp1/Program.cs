@@ -6,7 +6,6 @@ namespace Netværk_Programmering
     {
         static void Main(string[] args)
         {
-
             string text1 = "ÆØÅLOLMAOÆØÅ";
             var bytes1 = Encoding.ASCII.GetBytes(text1);
 
