@@ -24,7 +24,7 @@ namespace Netværk_Programmering
             Console.WriteLine(text2);
 
             int i = 0;
-            
+
         }
     }
 }
