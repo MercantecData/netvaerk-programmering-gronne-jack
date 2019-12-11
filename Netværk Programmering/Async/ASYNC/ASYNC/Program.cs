@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ASYNC
 {
-    class Program
+    class another
     {
         static void Main(string[] args)
         {
