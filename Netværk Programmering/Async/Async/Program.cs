@@ -9,21 +9,25 @@ namespace Async
     {
         static void Main(string[] args)
         {
-            
+            int i = 0;
             while (true)
             {
                 TcpClient client = new TcpClient();
 
                 int port = 42069;
-                IPAddress ip = IPAddress.Parse("172.16.241.96");
+                IPAddress ip = IPAddress.Parse("172.16.241.194");
                 IPEndPoint endPoint = new IPEndPoint(ip, port);
 
                 client.Connect(endPoint);
-
                 NetworkStream stream = client.GetStream();
                 ReceiveMessage(stream);
 
-                Console.Write("Write a message: ");
+                if (i < 1)
+                {
+                    Console.WriteLine("Connected.");
+                    i++;
+                }
+
                 string text = Console.ReadLine();
                 byte[] buffer = Encoding.UTF8.GetBytes(text);
 
@@ -36,8 +40,9 @@ namespace Async
 
             int numberOfBytesRead = await stream.ReadAsync(buffer, 0, 256);
             string receivedMessage = Encoding.UTF8.GetString(buffer, 0, numberOfBytesRead);
-
-            Console.Write("\n" + receivedMessage);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write(receivedMessage + "\n");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
