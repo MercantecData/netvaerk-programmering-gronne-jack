@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\49880\Desktop\netvaerk-programmering-gronne-jack\Netværk Programmering\Async\Program.cs" Link="Program.cs" />
-  </ItemGroup>
-
 </Project>
