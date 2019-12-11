@@ -13,7 +13,7 @@ namespace Call_Response
             int input = int.Parse(Console.ReadLine());
 
 
-            int port1 = 2069;
+            int port1 = 42069;
             IPAddress ip1 = IPAddress.Any;
             IPEndPoint localEndpoint = new IPEndPoint(ip1, port1);
             TcpListener listener = new TcpListener(localEndpoint);
